@@ -33,13 +33,15 @@ class SampleViewModel(val repository: SampleDataRepository) : ViewModel(), Corou
     fun loadPostAndAdData() {
         launch {
             try {
-                val posts = async { repository.getPosts() }
-                val ads = async { repository.getAds() }
-                postAndAdData.value = Result.success(Pair(posts.await(), ads.await()))
+                coroutineScope {
+                    val posts = async { repository.getPosts() }
+                    val ads = async { repository.getAds() }
+                    postAndAdData.value = Result.success(Pair(posts.await(), ads.await()))
+                }
             } catch (e: CancellationException) {
-                postData.value = Result.failure(e)
+                postAndAdData.value = Result.failure(e)
             } catch (e: Throwable) {
-                postData.value = Result.failure(e)
+                postAndAdData.value = Result.failure(e)
             }
         }
     }
