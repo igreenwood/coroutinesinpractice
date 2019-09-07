@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.isseiaoki.coroutinesinpractice.*
 import com.isseiaoki.coroutinesinpractice.databinding.ActivitySample2Binding
@@ -22,7 +23,8 @@ class Sample2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sample2)
         title = "Sample2"
-        viewModel = SampleViewModel(SampleDataRepository())
+        viewModel =
+            ViewModelProvider(this, SampleViewModelFactory(SampleDataRepository())).get(SampleViewModel::class.java)
 
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
