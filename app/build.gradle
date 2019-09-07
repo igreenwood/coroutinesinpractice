@@ -40,6 +40,10 @@ dependencies {
     // coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
+    // viewModelScope
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-alpha04"
+    // lifecycleScope
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-alpha04"
     // networking
     implementation 'com.squareup.retrofit2:retrofit:2.6.1'
     // image loader

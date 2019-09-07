@@ -19,7 +19,7 @@ class Sample1Activity : AppCompatActivity(), CoroutineScope {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sample1)
         title = "Sample1"
-
+        
         launch {
             delay(1000)
             binding.textView.text = "Hello, World"
