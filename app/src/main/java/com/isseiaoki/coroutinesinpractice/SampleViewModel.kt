@@ -39,7 +39,7 @@ class SampleViewModel(val repository: SampleDataRepository) : ViewModel(), Corou
                     postAndAdData.value = Result.success(Pair(posts.await(), ads.await()))
                 }
             } catch (e: CancellationException) {
-                postAndAdData.value = Result.failure(e)
+                // キャンセルの場合。今回は何もしない
             } catch (e: Throwable) {
                 postAndAdData.value = Result.failure(e)
             }
