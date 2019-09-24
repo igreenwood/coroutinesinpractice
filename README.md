@@ -1,12 +1,11 @@
 # coroutines in practice
-コルーチンの基本的な動作原理について学ぶためのサンプルコードです。
-`ていねいに学ぶAndroid開発 第2章 実践コルーチン 〜コードを動かして理解しよう〜`にて解説しています。
+[ていねいに学ぶAndroid開発 第2章 実践コルーチン 〜コードを動かして理解しよう〜](https://techbooster.booth.pm/items/1509191) で取り扱うサンプルコードです。実際に `clone` して動かしながら読み進めてもらうと理解しやすいと思います。
 
-## sample1
+## [sample1](https://github.com/igreenwood/coroutinesinpractice/tree/master/app/src/main/java/com/isseiaoki/coroutinesinpractice/sample1)
 `Activity/Fragment` でコルーチンを使用するサンプルです。
 
-## sample2
+## [sample2](https://github.com/igreenwood/coroutinesinpractice/tree/master/app/src/main/java/com/isseiaoki/coroutinesinpractice/sample2)
 `ViewModel` でコルーチンを使用するサンプルです。
 
-## sample3
-`sample2` の処理を少しだけ複雑にしたサンプルです。
+## [sample3](https://github.com/igreenwood/coroutinesinpractice/tree/master/app/src/main/java/com/isseiaoki/coroutinesinpractice/sample3)
+[sample2](https://github.com/igreenwood/coroutinesinpractice/tree/master/app/src/main/java/com/isseiaoki/coroutinesinpractice/sample2) の処理を少しだけ複雑にしたサンプルです。
